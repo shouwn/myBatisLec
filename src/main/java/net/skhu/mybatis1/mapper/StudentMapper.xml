@@ -5,11 +5,11 @@
 <mapper namespace="net.skhu.mybatis1.mapper.StudentMapper">
 
   <select id="findOne" resultType="Student">
-    SELECT * FROM Student WHERE id = #{id}
+    SELECT * FROM student WHERE id = #{id}
   </select>
 
   <select id="findByStudentNumber" resultType="Student">
-    SELECT * FROM Student WHERE studentNumber = #{studentNumber}
+    SELECT * FROM student WHERE studentNumber = #{studentNumber}
   </select>
 
   <select id="findAll" resultType="Student">
@@ -18,12 +18,12 @@
   </select>
 
   <insert id="insert" useGeneratedKeys="true" keyProperty="id">
-    INSERT Student (studentNumber, name, departmentId, year)
+    INSERT student (studentNumber, name, departmentId, year)
     VALUES (#{studentNumber}, #{name}, #{departmentId}, #{year})
   </insert>
 
   <update id="update">
-    UPDATE Student SET
+    UPDATE student SET
       studentNumber = #{studentNumber},
       name = #{name},
       departmentId = #{departmentId},
@@ -32,7 +32,7 @@
   </update>
 
   <delete id="delete">
-    DELETE FROM Student WHERE id = #{id}
+    DELETE FROM student WHERE id = #{id}
   </delete>
 
 </mapper>

@@ -5,7 +5,7 @@
 <mapper namespace="net.skhu.mybatis1.mapper.DepartmentMapper">
 
     <select id="findAll" resultType="Department">
-      SELECT * FROM Department
+      SELECT * FROM department
   </select>
 
 </mapper>
